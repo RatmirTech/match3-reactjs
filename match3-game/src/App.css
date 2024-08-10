@@ -11,6 +11,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .menu {
@@ -22,7 +24,7 @@
   border: none;
   padding: 10px 20px;
   margin: 5px;
-  font-size: 20px;
+  font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -33,8 +35,8 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(8, 64px);
-  gap: 2px;
+  grid-template-columns: repeat(6, 48px);
+  gap: 4px; 
   margin-top: 20px;
 }
 
@@ -61,19 +63,20 @@
 .tile {
   background-color: #444;
   color: white;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
   animation: fall 0.5s ease-in;
+  width: 48px; 
+  height: 48px;
+  line-height: 48px;
 }
 
 .tile.fade-out {
   animation: fadeOut 0.5s ease-out;
   pointer-events: none;
 }
-
-
 
 .tile:hover {
   transform: scale(1.1);
@@ -85,5 +88,32 @@
 
 .score {
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 20px; 
+}
+
+@media (max-width: 600px) {
+  .App-header {
+    padding: 10px;
+  }
+
+  .menu button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(6, 40px); 
+    gap: 2px;
+  }
+
+  .tile {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .score {
+    font-size: 18px;
+  }
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const TILE_SIZE = 64;
-const GRID_SIZE = 8;
+const TILE_SIZE = 48;
+const GRID_SIZE = 6;
 const TILE_TYPES = ['🍒', '🍋', '🍇', '🍉', '🍍'];
 
 const App = () => {
