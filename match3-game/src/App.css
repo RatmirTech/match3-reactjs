@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.menu button {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #21a1f1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 64px);
+  gap: 2px;
+  margin-top: 20px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.tile {
+  background-color: #444;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  animation: fall 0.5s ease-in;
+}
+
+.tile.fade-out {
+  animation: fadeOut 0.5s ease-out;
+  pointer-events: none;
+}
+
+
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+.selected {
+  background-color: #888;
+}
+
+.score {
+  margin-top: 10px;
+  font-size: 24px;
+}
